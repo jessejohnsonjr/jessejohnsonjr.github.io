@@ -5,152 +5,209 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jesse Johnson Jr. — Professional Summary</title>
 
-  <!-- Bootstrap 5 CSS (correct tag) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap 5 (CSS) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
+  <!-- Page styles -->
   <style>
-    :root {
-      --bg: #0f172a;
-      --card: #111827;
-      --muted: #94a3b8;
-      --text: #e5e7eb;
-      --pill: #1f2937;
-      --accent: #0ea5e9;
+    :root{
+      --bg: #0e1628;          /* deep blue background */
+      --bg-grad-1:#12233e;    /* gradient tint */
+      --bg-grad-2:#0b1426;
+      --card:#111827;         /* dark card */
+      --muted:#94a3b8;        /* slate-400 */
+      --text:#e5e7eb;         /* gray-200 */
+      --pill:#1f2937;         /* gray-800 */
+      --accent:#0ea5e9;       /* sky-500 */
+      --accent-2:#22d3ee;     /* cyan-400 */
+      --border: rgba(255,255,255,0.08);
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+      --radius: 14px;
     }
-    body {
-      background: radial-gradient(1200px 600px at 20% -10%, #12203a 0%, #0b1222 35%, var(--bg) 100%);
+    body{
+      background:
+        radial-gradient(900px 500px at 20% -10%, var(--bg-grad-1) 0%, var(--bg) 30%, var(--bg-grad-2) 100%),
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0));
       color: var(--text);
       font-size: 16px;
     }
-    .page-wrap { max-width: 1100px; margin: 40px auto; padding: 24px; }
-    .card-dark {
+    .page-wrap{max-width:1100px; margin:40px auto; padding:24px;}
+    .card-dark{
       background: var(--card);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
     }
-    .pill {
-      display: inline-block;
-      font-size: 0.8rem;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: var(--pill);
-      color: var(--text);
-      margin: 4px 6px 0 0;
-      border: 1px solid rgba(255,255,255,0.06);
+    .section-title{
+      font-weight: 700; font-size:1.05rem; color:#d1d5db; margin-bottom:.6rem;
     }
-    .section-title {
-      font-weight: 700;
-      font-size: 1.05rem;
-      margin-bottom: .5rem;
-      color: #d1d5db;
+    .muted{color:var(--muted)!important;}
+    .pill{
+      display:inline-block; font-size:.82rem; padding:6px 10px; border-radius:999px;
+      background: var(--pill); color:var(--text); margin:4px 6px 0 0; border:1px solid var(--border);
     }
-    .metric {
-      background: #0b1222;
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 10px;
-      padding: 10px 12px;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-right: 10px;
+    .metric{
+      display:flex; align-items:center; gap:10px;
+      background: #0b1222; color:var(--text);
+      border: 1px solid var(--border);
+      border-radius: 10px; padding: 12px 14px; min-width:180px;
     }
-    a { color: #93c5fd; }
-    .text-secondary { color: var(--muted) !important; }
+    .metric .label{font-size:.85rem; color:var(--muted);}
+    .metric .value{font-weight:700; font-size:1.05rem;}
+    .btn-accent{
+      --bs-btn-color:#06121b;
+      --bs-btn-bg: var(--accent);
+      --bs-btn-border-color: var(--accent);
+      --bs-btn-hover-bg:#0284c7;
+      --bs-btn-hover-border-color:#0284c7;
+      --bs-btn-focus-shadow-rgb:14,165,233;
+    }
+    .btn-ghost{
+      color:#e2e8f0; border:1px solid var(--border); background:rgba(255,255,255,0.02);
+    }
+    .btn-ghost:hover{ background:rgba(255,255,255,0.06); }
+    a, a:visited{ color:#93c5fd; }
+    footer{ color:var(--muted); font-size:.9rem; }
+    hr.hr-soft{ border:none; height:1px; background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent); margin:8px 0 16px; }
   </style>
 </head>
-
 <body>
   <div class="page-wrap">
 
     <!-- HEADER -->
-    <div class="card-dark p-3 mb-3">
-      <div class="d-flex flex-column flex-md-row justify-content-between">
+    <div class="card-dark p-3 p-md-3 mb-3">
+      <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between">
         <div class="pe-md-3">
-          <h1 class="h3 fw-bold">Jesse Johnson Jr.</h1>
-          <div class="text-secondary">
+          <h1 class="h3 mb-1 fw-bold">Jesse Johnson Jr.</h1>
+          <div class="muted">
             Cheektowaga, NY • 585‑569‑0563 •
-            <a href="mailto:Jesse.Johnsonjr20@live.com">Jesse.Johnsonjr20@live.com</a>
+            <a href="mailto:Jesse.Johnson1@live.com">Jesse.Johnson1@live.com</a>
           </div>
         </div>
-
         <div class="mt-3 mt-md-0 d-flex gap-2">
-          <a class="btn btn-sm btn-accent btn-primary" href="resume.pdf" target="_blank" rel="noopener">⬇️ Download Resume (PDF)</a>
-          <a class="btn btn-sm btn-outline-light" href="mailto:Jesse.Johnsonjr20@live.com">✉️ Contact Me</a>
+          <a class="btn btn-accent btn-sm px-3" href="./resume.pdf" target="_blank" rel="noopener">
+            ⬇️ Download Resume (PDF)
+          </a>
+          <a class="btn btn-ghost btn-sm px-3" href="mailto:Jesse.Johnson1@live.com">
+            ✉️ Contact Me
+          </a>
         </div>
       </div>
+      <hr class="hr-soft">
     </div>
 
     <!-- SUMMARY -->
-    <div class="card-dark p-3 mb-3">
+    <div class="card-dark p-3 p-md-3 mb-3">
       <div class="section-title">Professional Summary</div>
       <p class="mb-3">
         Operations &amp; Project Management leader with 19+ years of experience driving multi‑site operations,
-        launching programs, and developing high‑performing teams. Skilled in P&amp;L oversight, vendor &amp; contract
-        management, KPI/SLA performance, and process improvement across healthcare, HR, and financial sectors.
+        launching programs, and developing high‑performing teams. Skilled in P&amp;L oversight (&#36;35M+), workforce planning,
+        vendor management, and KPI/SLA performance. Combines executive‑level communication with rigorous process
+        improvement to elevate service quality, compliance, and employee engagement across union, healthcare, HR, and financial sectors.
       </p>
 
       <div class="mb-3">
         <span class="pill">Operations Leadership</span>
-        <span class="pill">Program/Project Mgmt</span>
+        <span class="pill">Program/Project Management</span>
         <span class="pill">P&amp;L / Budgeting</span>
         <span class="pill">Multi‑Site Management</span>
-        <span class="pill">Vendor Mgmt</span>
+        <span class="pill">Vendor &amp; Contract Mgmt</span>
+        <span class="pill">KPI / SLA Optimization</span>
         <span class="pill">Training &amp; Onboarding</span>
+        <span class="pill">Change Management</span>
       </div>
 
-      <div>
-        <span class="metric"><b>$35M+</b> Budget</span>
-        <span class="metric"><b>100+</b> Team Size</span>
-        <span class="metric"><b>6</b> Offices</span>
+      <div class="d-flex flex-column flex-md-row gap-2">
+        <div class="metric">
+          <div class="value">$35M+</div><div class="label">Budget Oversight</div>
+        </div>
+        <div class="metric">
+          <div class="value">100+</div><div class="label">Team Size Led</div>
+        </div>
+        <div class="metric">
+          <div class="value">6</div><div class="label">Regional Offices</div>
+        </div>
       </div>
     </div>
 
-    <!-- BODY -->
+    <!-- BODY / TWO COLUMNS -->
     <div class="row g-3">
-
+      <!-- Experience -->
       <div class="col-md-8">
-        <div class="card-dark p-3">
+        <div class="card-dark p-3 p-md-3 h-100">
           <div class="section-title">Selected Experience</div>
 
           <div class="mb-3">
-            <strong>NYS Public Employees Federation (PEF) — Executive Assistant</strong>
-            <div class="text-secondary">2022–Present</div>
-            <ul class="mb-2">
-              <li>Lead operations for six regional offices serving 56,000+ members.</li>
-              <li>Manage performance reviews, vendor relations, and contractual compliance.</li>
+            <div class="fw-semibold">NYS Public Employees Federation (PEF) — Executive Assistant (Operations & Projects)</div>
+            <div class="muted">2022–Present</div>
+            <ul class="mt-2 mb-2">
+              <li>Provide strategic oversight for six regional offices serving 56,000+ members.</li>
+              <li>Lead project tracking, time studies, training, vendor management, and performance reviews; partner with HR on policy and contractual compliance.</li>
+            </ul>
+          </div>
+
+          <div class="mb-3">
+            <div class="fw-semibold">Lash Group — Senior Operations Manager</div>
+            <div class="muted">2014–2018</div>
+            <ul class="mt-2 mb-2">
+              <li>Directed programs with $35M+ in oversight across two sites; built SOPs, QA plans, staffing models; improved SLAs and workforce performance.</li>
+              <li>Led 3 Program Managers &amp; 100+ associates.</li>
             </ul>
           </div>
 
           <div class="mb-1">
-            <strong>Lash Group — Senior Operations Manager</strong>
-            <div class="text-secondary">2014–2018</div>
-            <ul class="mb-2">
-              <li>Directed $35M+ program operations across two sites.</li>
-              <li>Supervised 3 managers and 100+ team members.</li>
+            <div class="fw-semibold">Bank of America — Officer, Case Management Team Manager II</div>
+            <div class="muted">2011–2014</div>
+            <ul class="mt-2 mb-2">
+              <li>Managed high‑volume, compliance‑driven operations; trained and coached teams; ran audits and KPI reporting; implemented process improvements.</li>
+            </ul>
+          </div>
+
+          <!-- Optional extra roles to match Screenshot 3 length -->
+          <div class="mb-1">
+            <div class="fw-semibold">Titanium Solutions — Loss Mitigation Supervisor</div>
+            <div class="muted">2009–2011</div>
+            <ul class="mt-2 mb-2">
+              <li>Led hiring, training, scheduling, and vendor relationships; developed outbound dialing strategies and dashboards.</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="fw-semibold">Citi Mortgage — VP, Default Services Manager</div>
+            <div class="muted">2006–2009</div>
+            <ul class="mt-2 mb-2">
+              <li>Managed RESPA Investigations &amp; Skip Tracing; oversaw closing &amp; QC; built operational reporting.</li>
             </ul>
           </div>
         </div>
       </div>
 
+      <!-- Sidebar -->
       <div class="col-md-4">
-        <div class="card-dark p-3 h-100">
+        <div class="card-dark p-3 p-md-3 h-100">
           <div class="section-title">Core Strengths</div>
           <ul class="mb-3">
-            <li>Process improvement</li>
-            <li>Executive communication</li>
-            <li>Training &amp; performance management</li>
+            <li>Multi‑industry operations (union, healthcare, finance, HR)</li>
+            <li>Executive communication &amp; stakeholder management</li>
+            <li>Process improvement &amp; change leadership</li>
+            <li>Training design &amp; performance management</li>
           </ul>
 
           <div class="section-title mt-3">Education</div>
-          <p class="mb-0">SUNY College at Buffalo — B.A. Political Science</p>
+          <div>SUNY College at Buffalo — B.A., Political Science</div>
+          <div class="muted">(Minor: Economics)</div>
         </div>
       </div>
-
     </div>
+
+    <!-- FOOTER -->
+    <div class="text-center mt-4">
+      <footer class="muted">© 2026 Jesse Johnson Jr. • Available for Operations Manager / Director roles</footer>
+    </div>
+
   </div>
 
-  <!-- Bootstrap 5 JS (correct tag) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap 5 (JS) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
